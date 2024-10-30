@@ -4,3 +4,7 @@ $$\begin{align*}
 x & = 3 \\
 y & = 3 + 6
 \end{align*}$$
+
+\[
+a^2 + b^2 = c^2
+\]
