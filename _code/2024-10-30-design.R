@@ -38,7 +38,7 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, fig.align = "center", fi
 #' feel more immersed when actively interacting and Virtual Reality should also
 #' lead to more immersion than a Multi-Touch Table.
 
-#+ fig.height = 5, fig.width = 6
+#+ data, fig.height = 5, fig.width = 6
 library(lme4)
 
 # Data simulation for a 2 (between) x 3 (within) design
@@ -87,23 +87,19 @@ text(1.4, 1.6, "active", col = colors[2])
 #' # Linear mixed-effects model
 #'
 #' The following model will be fitted to the data.
-#' $$
-#'    y = \beta_0 +
+#' $$y = \beta_0 +
 #'        \beta_1 mediatype_{VR1} +
 #'        \beta_2 mediatype_{VR2} +
 #'        \beta_3 interaction_{active} +
 #'        \beta_4 (mediatype_{VR1} \times interaction_{active}) +
 #'        \beta_5 (mediatype_{VR2} \times interaction_{active}) +
 #'        \upsilon_0 +
-#'        \varepsilon
-#' $$
-#' with
-#' $\upsilon_0 \sim N(0, \sigma^2_{\upsilon_0}) ~~~~~\text{and}~~~~~
-#'    \varepsilon \sim N(0, \sigma^2_{\varepsilon})$
+#'        \varepsilon$$
+#' with $\upsilon_0 \sim N(0, \sigma^2_{\upsilon_0})$ and 
+#' $\varepsilon \sim N(0, \sigma^2_{\varepsilon})$
 
 
 ## Fit linear mixed-effects model
-
 m1 <- lmer(y ~ 1 + mediatype + interaction + mediatype:interaction + (1| id),
            data = dat)
 
