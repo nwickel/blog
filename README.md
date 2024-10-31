@@ -1,13 +1,7 @@
-Math can be read properly, right? $x ~ \sim N(0, \sigma^2)$
+This is still in a building phase. Right now I am just trying out what the best
+workflow for me is, how to best get images and equations in, and learning a bit
+about Jekyll while I am at it.
 
-$$\begin{align*}
-x & = 3 \\
-y & = 3 + 6
-\end{align*}$$
+This supposed to become a minimalist blog where I document questions that come
+up in statistics consultations regularly.
 
-$$
-a^2 + b^2 = c^2
-$$
-
-
-$a^2 + b^2 = c^2$
