@@ -38,7 +38,7 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, fig.align = "center", fi
 #' feel more immersed when actively interacting and Virtual Reality should also
 #' lead to more immersion than a Multi-Touch Table.
 
-#+ data, fig.height = 5, fig.width = 6
+#+ data, fig.height = 5, fig.width = 6, fig.show = "hide"
 library(lme4)
 
 # Data simulation for a 2 (between) x 3 (within) design
