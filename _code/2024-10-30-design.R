@@ -7,8 +7,7 @@
 #'   - Categorical predictors
 #'   - Mixed Models
 #' output:
-#'   md_document:
-#'     variant: gfm
+#'   github_document:
 #'     preserve_yaml: true
 #' ---
 
