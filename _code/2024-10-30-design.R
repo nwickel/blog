@@ -84,6 +84,10 @@ points(y ~ I(1:3), datm[datm$interaction == "active", ], col = colors[2], type =
 text(1.45, 0.4, "passive", col = colors[1])
 text(1.4, 1.6, "active", col = colors[2])
 
+#+ echo = FALSE
+knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", Sys.Date(), "_data-1.png"))
+
+
 #' # Linear mixed-effects model
 #'
 #' The following model will be fitted to the data.
@@ -190,11 +194,7 @@ text(2, datm$y[datm$interaction == "active" & datm$mediatype == "VR1"],
 text(3, datm$y[datm$interaction == "active" & datm$mediatype == "VR2"],
      expression(beta[0] + beta[2] + beta[3] + beta[5]))
 
-#'
-#' `r paste0("![image](/figures/", Sys.Date(), "_plot-1.png)")`
-#'
-
-#+
+#+ echo = FALSE
 knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", Sys.Date(), "_plot-1.png"))
 
 #' # Session info
