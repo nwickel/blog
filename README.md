@@ -15,7 +15,7 @@ TODOs:
 
 * Why are equations not rendered correctly?
 
-  --> Jekyll was not rendering the latex math equations coorectly, instead
+  --> Jekyll was not rendering the LaTeX math equations correctly, instead
   interpreting them as markdown. I fixed this by adding the `default.html` in
   `_layouts` and adding a line for MathJax in there and by switching the
   markdown engine to kramdown. All math (inline and display) now needs to be
