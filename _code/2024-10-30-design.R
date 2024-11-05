@@ -195,7 +195,7 @@ text(3, datm$y[datm$interaction == "active" & datm$mediatype == "VR2"],
 #'
 
 #+
-knitr::include_graphics(paste0("../figures/", Sys.Date(), "_plot-1.png"))
+knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", Sys.Date(), "_plot-1.png"))
 
 #' # Session info
 
