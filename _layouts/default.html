@@ -15,30 +15,7 @@
 
     {%- include footer.html -%}
 
-  <!-- KaTeX libraries -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" crossorigin="anonymous"></script>
-  <!-- Convert Kramdown output into KaTeX rendered HTML -->
-  <script type="text/javascript">
-    // Kramdown dumps our math expressions in plaintext, so we replace the elements
-    // containing them with KaTeX rendered HTML
-    window.onload = function () {
-      document.querySelectorAll("script[type='math/tex; mode=display']")
-        .forEach(function (elem) {
-          try {
-            var tex = elem.innerText.replace(/%.*/g, '');
-            elem.outerHTML = katex.renderToString(tex, {displayMode: true});
-          } catch (e) { console.log("Invalid LaTeX. Skipping."); console.error(e) }
-        });
-      document.querySelectorAll("script[type='math/tex']")
-        .forEach(function (elem) {
-          try {
-            var tex = elem.innerText.replace(/%.*/g, '');
-            elem.outerHTML = katex.renderToString(tex, {displayMode: false});
-          } catch (e) { console.log("Invalid LaTeX. Skipping."); console.error(e) }
-        });
-    }
-  </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
   </body>
 

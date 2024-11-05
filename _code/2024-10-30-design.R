@@ -99,8 +99,8 @@ knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/r
 #'        \beta_5 (mediatype_{VR2} \times interaction_{active}) +
 #'        \upsilon_0 +
 #'        \varepsilon$$
-#' with $\upsilon_0 \sim N(0, \sigma^2_{\upsilon_0})$ and 
-#' $\varepsilon \sim N(0, \sigma^2_{\varepsilon})$
+#' with $$\upsilon_0 \sim N(0, \sigma^2_{\upsilon_0})$$ and 
+#' $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
 
 
 ## Fit linear mixed-effects model
@@ -116,14 +116,14 @@ knitr::kable(round(cbind(tab, ci[3:8, ]), 3))
 #'
 #' The two categorical predictors are dummy coded. For `interaction` the level
 #' `passive` is set as reference category. The dummy variable
-#' $interaction_{active}$ is therefore 0 for `passive` and 1 for `active`.
+#' $$interaction_{active}$$ is therefore 0 for `passive` and 1 for `active`.
 
 contrasts(dat$interaction)
 
 #'
 #' The three level factor `mediatype` is represented by two dummy variables,
-#' namely $mediatype_{VR1}$ and $mediatype_{VR2}$. Since `MTT` is the reference
-#' category, the coding scheme is as folows.
+#' namely $$mediatype_{VR1}$$ and $$mediatype_{VR2}$$. Since `MTT` is the
+#' reference category, the coding scheme is as folows.
 
 contrasts(dat$mediatype)
 
