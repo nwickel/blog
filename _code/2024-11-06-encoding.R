@@ -166,10 +166,10 @@ coef(lm3)[1] + coef(lm3)[2] + coef(lm3)[3] + coef(lm3)[4]   # sum(coef(lm3))
 #' groups.
 #'
 #' $$\begin{align*}
-#'     resp_{11} & = \beta_0 + \varepsilon                      & mean s1 and crt \\
-#'     resp_{12} & = \beta_0 + \beta_1 + \varepsilon            & mean s1 and trt \\
-#'     resp_{21} & = \beta_0 + \beta_2 + \varepsilon            & mean s2 and crt \\
-#'     resp_{22} & = \beta_0 + \beta_1 + \beta_2 + \beta_3 + \varepsilon  & mean s2 und trt
+#'     resp_{11} & = \beta_0 + \varepsilon                      & \text{mean s1 and crt} \\
+#'     resp_{12} & = \beta_0 + \beta_1 + \varepsilon            & \text{mean s1 and trt} \\
+#'     resp_{21} & = \beta_0 + \beta_2 + \varepsilon            & \text{mean s2 and crt} \\
+#'     resp_{22} & = \beta_0 + \beta_1 + \beta_2 + \beta_3 + \varepsilon  & \text{mean s2 und trt}
 #' \end{align*}$$
 #'
 #' with $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
@@ -233,10 +233,10 @@ coef(lm4)[1] - coef(lm4)[2] - coef(lm4)[3] + coef(lm4)[4]   # sum(coef(lm3))
 #' group means. Only the signs change.
 #'
 #' $$\begin{align*}
-#'     resp_{11} & = \beta_0 + \beta_1 + \beta_2 + \beta_3 + \varepsilon & mean s1 and crt \\
-#'     resp_{12} & = \beta_0 - \beta_1 + \beta_2 - \beta_3 + \varepsilon & mean s1 and trt \\
-#'     resp_{21} & = \beta_0 + \beta_1 - \beta_2 - \beta_3 + \varepsilon & mean s2 and crt \\
-#'     resp_{22} & = \beta_0 - \beta_1 - \beta_2 + \beta_3 + \varepsilon & mean s2 und trt
+#'     resp_{11} & = \beta_0 + \beta_1 + \beta_2 + \beta_3 + \varepsilon & \text{mean s1 and crt} \\
+#'     resp_{12} & = \beta_0 - \beta_1 + \beta_2 - \beta_3 + \varepsilon & \text{mean s1 and trt} \\
+#'     resp_{21} & = \beta_0 + \beta_1 - \beta_2 - \beta_3 + \varepsilon & \text{mean s2 and crt} \\
+#'     resp_{22} & = \beta_0 - \beta_1 - \beta_2 + \beta_3 + \varepsilon & \text{mean s2 und trt}
 #' \end{align*}$$
 #'
 #' with $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
