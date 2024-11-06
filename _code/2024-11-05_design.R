@@ -1,7 +1,7 @@
 #' ---
 #' title: "Understanding categorical predictors in a mixed-effects model"
 #' author: "Nora Wickelmaier"
-#' date: "`r Sys.Date()`"
+#' date: "2024-11-05"
 #' categories:
 #'   - R
 #'   - Categorical predictors
@@ -13,10 +13,8 @@
 #' ---
 
 #+ include = FALSE
-# rmarkdown::render("design.R", output_options = list(code_download=TRUE))
-# rmarkdown::render("design.R", output_format = "github_document", output_dir = "../_posts")
-knitr::opts_chunk$set(message = FALSE, warning = FALSE, fig.align = "center", fig.path = paste0("../figures/", Sys.Date(), "_"))
-
+date <- "2024-11-05"
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, fig.align = "center", fig.path = paste0("../figures/", date, "_"))
 
 #'
 #' This post is meant to give you a better understanding how to interpret
@@ -85,12 +83,13 @@ text(1.45, 0.4, "passive", col = colors[1])
 text(1.4, 1.6, "active", col = colors[2])
 
 #+ echo = FALSE
-knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", Sys.Date(), "_data-1.png"))
+knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", date, "_data-1.png"))
 
 
 #' # Linear mixed-effects model
 #'
 #' The following model will be fitted to the data.
+#'
 #' $$y = \beta_0 +
 #'        \beta_1 mediatype_{VR1} +
 #'        \beta_2 mediatype_{VR2} +
@@ -99,6 +98,7 @@ knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/r
 #'        \beta_5 (mediatype_{VR2} \times interaction_{active}) +
 #'        \upsilon_0 +
 #'        \varepsilon$$
+#'
 #' with $$\upsilon_0 \sim N(0, \sigma^2_{\upsilon_0})$$ and 
 #' $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
 
@@ -195,7 +195,7 @@ text(3, datm$y[datm$interaction == "active" & datm$mediatype == "VR2"],
      expression(beta[0] + beta[2] + beta[3] + beta[5]))
 
 #+ echo = FALSE
-knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", Sys.Date(), "_plot-1.png"))
+knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", date, "_plot-1.png"))
 
 #' # Session info
 
