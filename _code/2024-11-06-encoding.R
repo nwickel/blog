@@ -18,8 +18,8 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, fig.align = "center", fi
 set.seed(1101)
 
 #'
-#' Let us look at the differences between effect and dummy coding for regression
-#' models with categorical predictors.
+#' Let us look at the differences between effects and dummy coding for
+#' regression models with categorical predictors.
 #'
 
 #' # Model with one categorical factor
