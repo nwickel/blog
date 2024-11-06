@@ -122,7 +122,7 @@ aggregate(resp ~ group + study, data = dat, FUN = mean)
 
 mean(dat$resp)
 
-#+ interactionplot, fig.width = 3.375, fig.height = 3.375, fig.show = "hide"
+#+ interactionplot, fig.width = 5.5, fig.height = 4.5, fig.show = "hide"
 par(mai = c(.8, .8, .1, .1), mgp = c(2.4, 1, 0))
 with(dat, interaction.plot(group, study, resp))
 
@@ -174,7 +174,7 @@ coef(lm3)[1] + coef(lm3)[2] + coef(lm3)[3] + coef(lm3)[4]   # sum(coef(lm3))
 #'
 #' with $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
 
-#+ dummyplot, echo = FALSE, fig.width = 3.375, fig.height = 3.375, fig.show = "hide"
+#+ dummyplot, echo = FALSE, fig.width = 4.5, fig.height = 4.5, fig.show = "hide"
 colors <- c("lightgray", "darkgray")
 
 datm <- aggregate(resp ~ group + study, data = dat, FUN = mean)
@@ -241,7 +241,7 @@ coef(lm4)[1] - coef(lm4)[2] - coef(lm4)[3] + coef(lm4)[4]   # sum(coef(lm3))
 #'
 #' with $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
 
-#+ effectplot, echo = FALSE, fig.width = 3.375, fig.height = 3.375, fig.show = "hide"
+#+ effectplot, echo = FALSE, fig.width = 4.5, fig.height = 4.5, fig.show = "hide"
 par(mai = c(.8, .8, .1, .1), mgp = c(2.4, 1, 0))
 plot(resp ~ jitter(as.numeric(group), .5), data = dat,
      axes = FALSE,
@@ -318,7 +318,7 @@ arrows(2.1, coef(lm4)[1] - coef(lm4)[2] - coef(lm4)[3],
        length = 0.05,
        col = "#3CB4DC")
 
-legend("center",
+legend("bottomleft",
        c(expression(beta[1]), expression(beta[2]), expression(beta[3])),
        col = c("#FF6900", "#91C86E", "#3CB4DC"), lty = 1, bty = "n")
 legend("topright", c("Study 1", "Study 2"), col = colors, pch = 16, bty = "n", pt.cex = 2)
