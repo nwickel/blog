@@ -170,7 +170,7 @@ coef(lm3)[1] + coef(lm3)[2] + coef(lm3)[3] + coef(lm3)[4]   # sum(coef(lm3))
 #'     resp_{12} & = \beta_0 + \beta_1 + \varepsilon            & mean s1 and trt \\
 #'     resp_{21} & = \beta_0 + \beta_2 + \varepsilon            & mean s2 and crt \\
 #'     resp_{22} & = \beta_0 + \beta_1 + \beta_2 + \beta_3 + \varepsilon  & mean s2 und trt
-#' $$\end{align*}
+#' \end{align*}$$
 #'
 #' with $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
 
@@ -212,6 +212,7 @@ text(1.1,  datm$resp[datm$group == "ctr" & datm$study == "s2"],
 text(2.1,  datm$resp[datm$group == "trt" & datm$study == "s2"],
      expression(beta[0] + beta[1] + beta[2] + beta[3]))
 
+#+ echo = FALSE
 knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", date, "_dummyplot-1.png"))
 
 #' ## Linear model with effects coding
@@ -236,7 +237,7 @@ coef(lm4)[1] - coef(lm4)[2] - coef(lm4)[3] + coef(lm4)[4]   # sum(coef(lm3))
 #'     resp_{12} & = \beta_0 - \beta_1 + \beta_2 - \beta_3 + \varepsilon & mean s1 and trt \\
 #'     resp_{21} & = \beta_0 + \beta_1 - \beta_2 - \beta_3 + \varepsilon & mean s2 and crt \\
 #'     resp_{22} & = \beta_0 - \beta_1 - \beta_2 + \beta_3 + \varepsilon & mean s2 und trt
-#' $$\end{align*}
+#' \end{align*}$$
 #'
 #' with $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
 
@@ -322,6 +323,7 @@ legend("center",
        col = c("#FF6900", "#91C86E", "#3CB4DC"), lty = 1, bty = "n")
 legend("topright", c("Study 1", "Study 2"), col = colors, pch = 16, bty = "n", pt.cex = 2)
 
+#+ echo = FALSE
 knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", date, "_effectplot-1.png"))
 
 
