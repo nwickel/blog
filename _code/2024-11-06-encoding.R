@@ -1,5 +1,5 @@
 #' ---
-#' title: "Effect vs. dummy coding"
+#' title: "Effects vs. dummy coding"
 #' author: "Nora Wickelmaier"
 #' date: "2024-11-06"
 #' categories:
