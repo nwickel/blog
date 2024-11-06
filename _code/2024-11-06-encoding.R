@@ -75,16 +75,16 @@ sum(coef(lm1))  # mean trt
 #' control and the treatment group ($$\bar x_{trt} = \beta_0 + \beta_1$$).
 #'
 
-#' ## Linear model with effect coding
+#' ## Linear model with effects coding
 #'
-#' Next, we will fit the same model with effect coding. Hereby, the reference
+#' Next, we will fit the same model with effects coding. Hereby, the reference
 #' group is coded as $$-1$$.
 
 contrasts(dat$group) <- "contr.sum"
 contrasts(dat$group)
 
 #'
-#' You can see that for effect coding, R takes the _last_ factor level as
+#' You can see that for effects coding, R takes the _last_ factor level as
 #' reference category.
 #'
 #' Now, let us refit the model.
@@ -171,8 +171,10 @@ coef(lm3)[1] + coef(lm3)[2] + coef(lm3)[3] + coef(lm3)[4]   # sum(coef(lm3))
 #'     resp_{21} & = \beta_0 + \beta_2 + \varepsilon            & mean s2 and crt \\
 #'     resp_{22} & = \beta_0 + \beta_1 + \beta_2 + \beta_3 + \varepsilon  & mean s2 und trt
 #' $$\end{align*}
+#'
+#' with $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
 
-#+ dummyplot, fig.width = 3.375, fig.height = 3.375, fig.show = "hide"
+#+ dummyplot, echo = FALSE, fig.width = 3.375, fig.height = 3.375, fig.show = "hide"
 colors <- c("lightgray", "darkgray")
 
 datm <- aggregate(resp ~ group + study, data = dat, FUN = mean)
@@ -212,7 +214,7 @@ text(2.1,  datm$resp[datm$group == "trt" & datm$study == "s2"],
 
 knitr::include_graphics(paste0("https://raw.githubusercontent.com/nwickel/blog/refs/heads/main/figures/", date, "_dummyplot-1.png"))
 
-#' ## Linear model with dummy coding
+#' ## Linear model with effects coding
 
 contrasts(dat$group) <- "contr.sum"
 contrasts(dat$study) <- "contr.sum"
@@ -236,8 +238,9 @@ coef(lm4)[1] - coef(lm4)[2] - coef(lm4)[3] + coef(lm4)[4]   # sum(coef(lm3))
 #'     resp_{22} & = \beta_0 - \beta_1 - \beta_2 + \beta_3 + \varepsilon & mean s2 und trt
 #' $$\end{align*}
 #'
+#' with $$\varepsilon \sim N(0, \sigma^2_{\varepsilon})$$
 
-#+ effectplot, fig.width = 3.375, fig.height = 3.375, fig.show = "hide"
+#+ effectplot, echo = FALSE, fig.width = 3.375, fig.height = 3.375, fig.show = "hide"
 par(mai = c(.8, .8, .1, .1), mgp = c(2.4, 1, 0))
 plot(resp ~ jitter(as.numeric(group), .5), data = dat,
      axes = FALSE,
