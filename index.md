@@ -1,5 +1,5 @@
 ---
-title: Welcome to my blog
+title: 
 ---
 
 This is still in a building phase. Right now I am just trying out what the best

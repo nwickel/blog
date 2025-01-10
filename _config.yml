@@ -1,7 +1,7 @@
 theme: minima
 title: "Statistics snippets"
 author: "Nora Wickelmaier"
-description: "In this blog, I collect random scripts from questions discussed during statistics consulting."
+description: "I collect random scripts here, that I use for teaching or created for questions discussed during statistics consulting."
 markdown: kramdown
 kramdown:
   math_engine: mathjax
